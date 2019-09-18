@@ -7,8 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 from passlib.hash import sha256_crypt
-engine = create_engine('mysql+pymysql://root:Ccyj1943!@localhost/register')
-                        #(mysql+pymysql://username:password@localhost/databasename)
+engine = create_engine('mysql+pymysql://username:password@localhost/register')
 db=scoped_session(sessionmaker(bind=engine))
 app = Flask(__name__)
 
